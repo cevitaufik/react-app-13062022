@@ -1,17 +1,18 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import {createRoot} from 'react-dom/client';
+import DicodingLogo from './dicoding-logo.png';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+const element = (
+  <div>
+    <h1>Biodata Perusahaan</h1>
+    <ul>
+      <li>Nama: Dicoding Indonesia</li>
+      <li>Bidang: Education</li>
+      <li>Tagline: Decode Ideas, Discover Potential.</li>
+      <img src={DicodingLogo} alt="Dicoding logo" />
+    </ul>
+  </div>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const root = createRoot(document.getElementById('root'));
+root.render(element);
